@@ -1,6 +1,6 @@
-# Time Series Forecasting Using Joint STL Decomposition and Residual Dilated RNNs
+# Time Series Forecasting Using Residual Dilated RNNs with STL Decomposition
 
-PyTorch Implementation of joint STL (Seasonal and Trend decomposition using Loess) decomposition and Residual Dilated RNNs for time series forecasting. 
+PyTorch Implementation of Residual Dilated RNNs with STL (Seasonal and Trend decomposition using Loess) decomposition
 
 ## Dataset
 
