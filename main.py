@@ -1,6 +1,6 @@
 """*********************************************************************************************
 
-                       Joint STL Decomposition and Residual Dilated RNNs
+                       Residual Dilated RNNs with STL Decomposition
 
 *********************************************************************************************"""
 #%% Importing Libraries
@@ -15,14 +15,14 @@ from trainer import ResidualDRNNTrainer
 #%%
 
 print('loading config')
-config = get_config('Quarterly')
+config = get_config('Monthly')
 print('loading data')
 info = pd.read_csv('../data/M4-info.csv')
 
 train_path = '../data/Train/%s-train.csv' % (config['variable'])
 test_path = '../data/Test/%s-test.csv' % (config['variable'])
 
-mode='Training'
+mode='Testing'
 
 if mode =='Training':
     train, val = create_val_dataset(train_path, config['output_size'])

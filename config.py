@@ -21,15 +21,14 @@ def get_config(interval):
         config.update({
             'chop_val': 72,
             'variable': "Quarterly",
-            'dilations': ((1,2),(4,8)),
+            'dilations': ((1,4),),
             'state_hsize': 40,
             'seasonality': 4,
-            'input_size': 4,
+            'input_size': 1,
             'output_size': 8
         })
     elif interval == 'Monthly':
         config.update({
-            #     RUNTIME PARAMETERS
             'chop_val': 72,
             'variable': "Monthly",
             'dilations': ((1, 3), (6, 12)),
@@ -40,7 +39,6 @@ def get_config(interval):
         })
     elif interval == 'Daily':
         config.update({
-            #     RUNTIME PARAMETERS
             'chop_val': 200,
             'variable': "Daily",
             'dilations': ((1, 7), (14, 28)),
@@ -50,9 +48,7 @@ def get_config(interval):
             'output_size': 14
         })
     elif interval == 'Yearly':
-
         config.update({
-            #     RUNTIME PARAMETERS
             'chop_val': 25,
             'variable': "Yearly",
             'dilations': ((1, 2), (2, 6)),

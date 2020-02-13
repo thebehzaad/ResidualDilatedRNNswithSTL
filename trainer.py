@@ -29,7 +29,7 @@ class ResidualDRNNTrainer(nn.Module):
             self.scheduler.step()
             epoch_loss = self.train()
             epoch_val_loss = self.val()
-            print(epoch_val_loss)
+            print('Validation Loss: %f' % epoch_val_loss)
         print('Total Training Mins: %5.2f' % ((time.time()-start_time)/60))
 
     def train(self):
